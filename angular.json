@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "cinemApp-Angular-client"
+  "defaultProject": "cinemApp-Angular-client",
+  "cli": {
+    "analytics": "6ad4a9e5-488e-4365-8fd6-aa3183991a0a"
+  }
 }
