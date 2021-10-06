@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -9,9 +9,17 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  private isDark = true;
+
+  @HostBinding('class')
+  get themeMode(): string {
+    return this.isDark ? 'dark-theme' : 'light-theme';
+  }
+
   title = 'cinemApp-Angular-client';
 
-  constructor(public dialog: MatDialog){}
+  constructor(public dialog: MatDialog) { }
 
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
