@@ -1,0 +1,5 @@
+@import "../../assets/mixins";
+
+#content {
+  @include contentView;
+}

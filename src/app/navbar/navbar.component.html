@@ -3,14 +3,14 @@
     <button class="hamburger" (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm="true">
       <mat-icon>menu</mat-icon>
     </button>
-    <span><img id="logo" src="../../assets/CinemApp.png" /></span>
+    <div (click)="backToHome()"><img id="logo" src="../../assets/CinemApp.png" /></div>
     <span id="divider"></span>
     <div fxShow="true" fxHide.lt-md="true" class="menu-buttons">
       <button mat-raised-button color="basic">Logout</button>
       <button mat-raised-button (click)="toProfile()" color="basic">Profile</button>
-      <button mat-raised-button color="basic">Genres</button>
-      <button mat-raised-button color="basic">Directors</button>
-      <button mat-raised-button color="basic">Actors</button>
+      <button mat-raised-button (click)="toGenres()" color="basic">Genres</button>
+      <button mat-raised-button (click)="toDirectors()" color="basic">Directors</button>
+      <button mat-raised-button (click)="toActors()" color="basic">Actors</button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

@@ -1,9 +1,5 @@
-#content {
-  width: 80%;
-  margin: auto;
-  margin-top: 40px;
-}
+@import "../../assets/_mixins.scss";
 
-h1 {
-  font-size: 36px;
+#content {
+  @include contentView;
 }

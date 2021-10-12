@@ -18,4 +18,28 @@ export class NavbarComponent implements OnInit {
       .then(success => console.log('navigation success?', success))
       .catch(console.error);
   }
+
+  toActors(): void {
+    this.router.navigate(['/actors'])
+      .then(success => console.log('navigation success?', success))
+      .catch(console.error);
+  }
+
+  toDirectors(): void {
+    this.router.navigate(['/directors'])
+      .then(success => console.log('navigation success?', success))
+      .catch(console.error);
+  }
+
+  toGenres(): void {
+    this.router.navigate(['/genres'])
+      .then(success => console.log('navigation success?', success))
+      .catch(console.error);
+  }
+
+  backToHome(): void {
+    this.router.navigate(['/movies'])
+      .then(success => console.log('navigation success?', success))
+      .catch(console.error);
+  }
 }
