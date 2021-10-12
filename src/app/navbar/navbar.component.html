@@ -6,7 +6,7 @@
     <div (click)="backToHome()"><img id="logo" src="../../assets/CinemApp.png" /></div>
     <span id="divider"></span>
     <div fxShow="true" fxHide.lt-md="true" class="menu-buttons">
-      <button mat-raised-button color="basic">Logout</button>
+      <button mat-raised-button (click)="logOut()" color="basic">Logout</button>
       <button mat-raised-button (click)="toProfile()" color="basic">Profile</button>
       <button mat-raised-button (click)="toGenres()" color="basic">Genres</button>
       <button mat-raised-button (click)="toDirectors()" color="basic">Directors</button>
@@ -18,11 +18,11 @@
 <mat-sidenav-container fxShow="true" fxHide.gt-sm="true" fxFlexFill class="example-container">
   <mat-sidenav #sidenav>
     <div fxLayout="column">
-      <a color="basic">Genres</a>
-      <a color="basic">Directors</a>
-      <a color="basic">Actors</a>
+      <a (click)="toActors()" color="basic">Actors</a>
+      <a (click)="toDirectors()" color="basic">Directors</a>
+      <a (click)="toGenres()" color="basic">Genres</a>
       <a (click)="toProfile()" color="basic">Profile</a>
-      <a color="basic">Logout</a>
+      <a (click)="logOut()" color="basic">Logout</a>
       <a (click)="sidenav.toggle()">
         <mat-icon>close</mat-icon>Close
       </a>

@@ -42,4 +42,12 @@ export class NavbarComponent implements OnInit {
       .then(success => console.log('navigation success?', success))
       .catch(console.error);
   }
+
+  logOut(): void {
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    this.router.navigate(['/welcome'])
+      .then(success => console.log('navigation success?', success))
+      .catch(console.error);
+  }
 }
