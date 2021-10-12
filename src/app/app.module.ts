@@ -26,6 +26,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ActorsComponent } from './actors/actors.component';
+import { DirectorsComponent } from './directors/directors.component';
+import { GenresComponent } from './genres/genres.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -44,6 +46,8 @@ const appRoutes: Routes = [
     UserProfileComponent,
     NavbarComponent,
     ActorsComponent,
+    DirectorsComponent,
+    GenresComponent,
   ],
   imports: [
     BrowserModule,
