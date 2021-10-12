@@ -2,5 +2,19 @@
   <app-navbar></app-navbar>
   <div id="content">
     <h1>Actors</h1>
+    <div class="actors-container">
+      <div class="actor-card-wrapper" *ngFor="let actor of actors;">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{actor.Name}}</mat-card-title>
+            <mat-card-subtitle>
+              <img class="actor-img" src={{actor.ActorImg}} alt={{actor.Name}}>
+            </mat-card-subtitle>
+            <mat-card-content> {{actor.Bio}}</mat-card-content>
+          </mat-card-header>
+          <div class="img-shadow"></div>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>

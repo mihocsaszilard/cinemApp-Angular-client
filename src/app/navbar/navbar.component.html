@@ -6,11 +6,11 @@
     <div (click)="backToHome()"><img id="logo" src="../../assets/CinemApp.png" /></div>
     <span id="divider"></span>
     <div fxShow="true" fxHide.lt-md="true" class="menu-buttons">
-      <button mat-raised-button (click)="logOut()" color="basic">Logout</button>
-      <button mat-raised-button (click)="toProfile()" color="basic">Profile</button>
-      <button mat-raised-button (click)="toGenres()" color="basic">Genres</button>
-      <button mat-raised-button (click)="toDirectors()" color="basic">Directors</button>
-      <button mat-raised-button (click)="toActors()" color="basic">Actors</button>
+      <button mat-button (click)="logOut()" color="basic">Logout</button>
+      <button mat-button (click)="toProfile()" color="basic">Profile</button>
+      <button mat-button (click)="toGenres()" color="basic">Genres</button>
+      <button mat-button (click)="toDirectors()" color="basic">Directors</button>
+      <button mat-button (click)="toActors()" color="basic">Actors</button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -23,9 +23,7 @@
       <a (click)="toGenres()" color="basic">Genres</a>
       <a (click)="toProfile()" color="basic">Profile</a>
       <a (click)="logOut()" color="basic">Logout</a>
-      <a (click)="sidenav.toggle()">
-        <mat-icon>close</mat-icon>Close
-      </a>
+      <a (click)="sidenav.toggle()">Close</a>
     </div>
   </mat-sidenav>
 </mat-sidenav-container>
