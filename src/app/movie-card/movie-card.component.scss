@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  margin: 10px;
+  margin: 5px 0;
 }
 
 .card {
@@ -15,13 +14,11 @@
   align-items: center;
   margin: 5px;
   margin-bottom: 10px;
-  background-color: #000b0c !important;
+  background-color: #111 !important;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   &:hover {
-    box-shadow: 0 14px 28px rgba(255, 255, 255, 0.664),
-      0 10px 10pxrgba (255, 255, 255, 0.603);
     transform: scale(1.05);
   }
 }
@@ -60,6 +57,15 @@ mat-toolbar {
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+mat-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  box-shadow: 0 2px 3px #222;
+  width: 350px;
 }
 
 #logo {
