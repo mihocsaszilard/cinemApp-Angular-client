@@ -24,6 +24,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
     MovieCardComponent,
     WelcomePageComponent,
     UserProfileComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
