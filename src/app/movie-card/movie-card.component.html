@@ -1,36 +1,5 @@
 <div id="#main-body">
-  <mat-toolbar>
-    <mat-toolbar-row>
-      <button class="hamburger" (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm="true">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span><img id="logo" src="../../assets/CinemApp.png" /></span>
-      <span id="divider"></span>
-      <div fxShow="true" fxHide.lt-md="true" class="menu-buttons">
-        <button mat-raised-button color="basic">Logout</button>
-        <button mat-raised-button (click)="toProfile()" color="basic">Profile</button>
-        <button mat-raised-button color="basic">Genres</button>
-        <button mat-raised-button color="basic">Directors</button>
-        <button mat-raised-button color="basic">Actors</button>
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  <!--mobile navigation-->
-  <mat-sidenav-container fxShow="true" fxHide.gt-sm="true" fxFlexFill class="example-container">
-    <mat-sidenav #sidenav>
-      <div fxLayout="column">
-        <a color="basic">Genres</a>
-        <a color="basic">Directors</a>
-        <a color="basic">Actors</a>
-        <a (click)="toProfile()" color="basic">Profile</a>
-        <a color="basic">Logout</a>
-        <a (click)="sidenav.toggle()">
-          <mat-icon>close</mat-icon>Close
-        </a>
-      </div>
-    </mat-sidenav>
-  </mat-sidenav-container>
-
+  <app-navbar></app-navbar>
   <div class="content">
     <div class="align-help" fxLayout="row wrap">
       <div class="movies-container" *ngFor="let movie of movies;">

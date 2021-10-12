@@ -26,10 +26,4 @@ export class MovieCardComponent implements OnInit {
       return this.movies;
     });
   }
-
-  toProfile(): void {
-    this.router.navigate(['/profile'])
-      .then(success => console.log('navigation success?', success))
-      .catch(console.error);
-  }
 }
