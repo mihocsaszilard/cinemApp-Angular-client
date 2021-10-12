@@ -63,13 +63,22 @@ body {
 body,
 * {
   margin: 0;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Spartan", sans-serif;
   font-size: 16px;
 }
 
 body {
   background-color: #111;
   color: azure;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Righteous", cursive;
 }
 
 .dark-theme {
