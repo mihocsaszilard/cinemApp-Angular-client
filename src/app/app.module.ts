@@ -25,6 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ActorsComponent } from './actors/actors.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     WelcomePageComponent,
     UserProfileComponent,
     NavbarComponent,
+    ActorsComponent,
   ],
   imports: [
     BrowserModule,
