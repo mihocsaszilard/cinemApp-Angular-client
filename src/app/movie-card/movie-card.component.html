@@ -1,6 +1,7 @@
 <div id="#main-body">
   <mat-toolbar>
     <span><img id="logo" src="../../assets/CinemApp.png" /></span>
+    <span id="divider"></span>
   </mat-toolbar>
   <div class="content">
     <div class="align-help" fxLayout="row wrap">
@@ -14,13 +15,13 @@
           <img class="movie-img" src={{movie.ImgPath}} alt={{movie.Title}} />
 
           <mat-card-actions>
-            <button mat-button color="primary">
+            <button mat-button color="basic">
               Genre
             </button>
-            <button mat-button color="primary">
+            <button mat-button color="basic">
               Director
             </button>
-            <button mat-button color="primary">
+            <button mat-button color="basic">
               Synopsis
             </button>
             <mat-icon class="favorites-icon">favorite_border</mat-icon>
