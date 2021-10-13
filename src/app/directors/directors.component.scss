@@ -3,3 +3,67 @@
 #content {
   @include contentView;
 }
+
+.director-img {
+  height: 275px;
+  float: left;
+  margin-right: 20px;
+}
+
+.directors-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ng-star-inserted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card {
+  background-color: transparent !important;
+  border-bottom: 1px solid $halfred;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+mat-card-title {
+  margin: auto;
+}
+
+mat-card-subtitle {
+  max-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+  line-height: 1.7;
+}
+
+mat-card-content {
+  @include textfont;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 877px) {
+  mat-card-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    mat-card-content {
+      font-size: 16px;
+    }
+    .director-img {
+      float: none;
+      margin: 0;
+    }
+  }
+
+  #content {
+    h1 {
+      font-size: 60px !important;
+    }
+  }
+}

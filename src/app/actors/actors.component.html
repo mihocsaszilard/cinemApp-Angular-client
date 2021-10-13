@@ -10,7 +10,10 @@
             <mat-card-subtitle>
               <img class="actor-img" src={{actor.ActorImg}} alt={{actor.Name}}>
             </mat-card-subtitle>
-            <mat-card-content> {{actor.Bio}}</mat-card-content>
+            <mat-card-content>
+              Born: {{(actor.Birth).slice(0, 10)}} <br><br>
+              {{actor.Bio}}
+            </mat-card-content>
           </mat-card-header>
           <div class="img-shadow"></div>
         </mat-card>

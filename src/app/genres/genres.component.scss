@@ -3,3 +3,47 @@
 #content {
   @include contentView;
 }
+
+.ng-star-inserted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card {
+  background-color: transparent !important;
+  border-bottom: 1px solid $halfred;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+mat-card-title {
+  @include title;
+  font-size: 35px !important;
+}
+
+mat-card-content {
+  @include textfont;
+}
+
+mat-card-subtitle {
+  width: 200px;
+}
+
+@media screen and (max-width: 877px) {
+  mat-card-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    mat-card-content {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+
+  #content {
+    h1 {
+      font-size: 60px !important;
+    }
+  }
+}

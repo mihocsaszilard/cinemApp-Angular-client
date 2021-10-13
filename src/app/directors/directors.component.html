@@ -2,5 +2,23 @@
   <app-navbar></app-navbar>
   <div id="content">
     <h1>Directors</h1>
+    <div class="actors-container">
+      <div class="actor-card-wrapper" *ngFor="let director of directors;">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{director.Name}}</mat-card-title>
+            <mat-card-subtitle>
+              <img class="director-img" src={{director.DirectorImg}} alt={{director.Name}}>
+            </mat-card-subtitle>
+            <mat-card-content>
+              Born: {{(director.Birthyear).slice(4, 16)}}
+              <br><br>
+              {{director.Bio}}
+            </mat-card-content>
+          </mat-card-header>
+          <div class="img-shadow"></div>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>

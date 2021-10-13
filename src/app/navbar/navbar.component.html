@@ -12,6 +12,17 @@
       <button mat-button (click)="toDirectors()" color="basic">Directors</button>
       <button mat-button (click)="toActors()" color="basic">Actors</button>
     </div>
+    <div id="social-desktop" fxShow="true" fxHide.lt-md="true">
+      <a href="https://www.linkedin.com/in/mihocsaszilard/" color="basic">
+        <img src="../../assets/linkedin.svg" alt="linkedin logo">
+      </a>
+      <a href="https://github.com/mihocsaszilard" color="basic">
+        <img src="../../assets/github.svg" alt="github logo">
+      </a>
+      <a href="https://twitter.com/MihocsaS" color="basic">
+        <img src="../../assets/twitter.svg" alt="twitter logo">
+      </a>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 <!--mobile navigation-->
@@ -24,6 +35,17 @@
       <a (click)="toProfile()" color="basic">Profile</a>
       <a (click)="logOut()" color="basic">Logout</a>
       <a (click)="sidenav.toggle()">Close</a>
+      <div id="social">
+        <a href="https://www.linkedin.com/in/mihocsaszilard/" color="basic">
+          <img src="../../assets/linkedin.svg" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/mihocsaszilard" color="basic">
+          <img src="../../assets/github.svg" alt="github logo">
+        </a>
+        <a href="https://twitter.com/MihocsaS" color="basic">
+          <img src="../../assets/twitter.svg" alt="twitter logo">
+        </a>
+      </div>
     </div>
   </mat-sidenav>
 </mat-sidenav-container>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FetchApiDataService } from '../fetch-api-data.service';
 
 @Component({
   selector: 'app-genres',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenresComponent implements OnInit {
 
-  constructor() { }
+  genres: any[] = [];
+
+  constructor(public fetchApiData: FetchApiDataService) { }
 
   ngOnInit(): void {
+    this.getGenres();
   }
 
+  getGenres(): void {
+    this.fetchApiData.getGenres().subscribe((response: any) => {
+      this.genres = response;
+      console.log(this.genres);
+      return this.genres;
+    });
+  }
 }

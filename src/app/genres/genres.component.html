@@ -2,5 +2,20 @@
   <app-navbar></app-navbar>
   <div id="content">
     <h1>Genres</h1>
+    <div class="actors-container">
+      <div class="actor-card-wrapper" *ngFor="let genre of genres;">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{genre.Name}}</mat-card-title>
+            <mat-card-subtitle>
+            </mat-card-subtitle>
+            <mat-card-content>
+              {{genre.Description}}
+            </mat-card-content>
+          </mat-card-header>
+          <div class="img-shadow"></div>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>

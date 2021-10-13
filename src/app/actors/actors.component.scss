@@ -23,7 +23,7 @@
 
 mat-card {
   background-color: transparent !important;
-  border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+  border-bottom: 1px solid $halfred;
   margin-bottom: 20px;
   max-width: 80%;
 }
@@ -38,8 +38,7 @@ mat-card-content {
 }
 
 mat-card-content {
-  margin: 20px;
-  font-size: 18px;
+  @include textfont;
   display: flex;
   align-items: center;
 }
@@ -55,6 +54,12 @@ mat-card-content {
     .actor-img {
       float: none;
       margin: 0;
+    }
+  }
+
+  #content {
+    h1 {
+      font-size: 60px !important;
     }
   }
 }

@@ -28,6 +28,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ActorsComponent } from './actors/actors.component';
 import { DirectorsComponent } from './directors/directors.component';
 import { GenresComponent } from './genres/genres.component';
+import { MatTableModule } from '@angular/material/table';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -69,6 +70,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatSidenavModule,
     FlexLayoutModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
