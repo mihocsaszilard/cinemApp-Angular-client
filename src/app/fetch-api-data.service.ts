@@ -63,7 +63,7 @@ export class FetchApiDataService {
   * Get a movie
   * @returns a movie
   */
-  getAMovies(): Observable<any> {
+  getAMovie(): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http.get(apiUrl + 'movies/:movieId', {
       headers: new HttpHeaders(

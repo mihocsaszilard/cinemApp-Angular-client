@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { GenreModalComponent } from '../genre-modal/genre-modal.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -9,11 +11,12 @@ import { Router } from '@angular/router';
 })
 export class MovieCardComponent implements OnInit {
   movies: any[] = [];
-  director: any;
 
   constructor(
     public fetchApiData: FetchApiDataService,
-    public router: Router) { }
+    public router: Router,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.getMovies();
@@ -24,6 +27,16 @@ export class MovieCardComponent implements OnInit {
       this.movies = response;
       console.log(this.movies);
       return this.movies;
+    });
+  }
+
+  openGenreModal(name: string, description: string): void {
+    this.dialog.open(GenreModalComponent, {
+      width: '50%',
+      data: {
+        Name: name,
+        Description: description,
+      }
     });
   }
 }

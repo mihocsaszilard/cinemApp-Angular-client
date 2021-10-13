@@ -40,13 +40,31 @@ mat-card-header {
   background-color: #000;
   box-shadow: 0 2px 3px #222;
   min-width: 350px;
+  a {
+    cursor: pointer;
+    padding: 5px 8px;
+    font-size: 16px;
+    border-right: 1px solid darken($halfred, 30%);
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  mat-icon {
+    cursor: pointer;
+    margin-left: 8px;
+    padding-right: 5px;
+  }
 }
 
 .favorites-icon {
   color: rgba($red, 0.75);
-
   display: flex;
   align-items: center;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .movie-title {

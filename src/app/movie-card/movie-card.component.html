@@ -14,16 +14,16 @@
           <div class="img-shadow"></div>
           <img class="movie-img" src={{movie.ImgPath}} alt={{movie.Title}} />
 
-          <mat-card-actions>
-            <button mat-button color="basic">
+          <mat-card-actions class="mat-card-actions">
+            <a color="basic" (click)="openGenreModal(movie.Genre[0].Name, movie.Genre[0].Description)">
               Genre
-            </button>
-            <button mat-button color="basic">
+            </a>
+            <a color="basic">
               Director
-            </button>
-            <button mat-button color="basic">
+            </a>
+            <a color="basic">
               Synopsis
-            </button>
+            </a>
             <mat-icon class="favorites-icon">favorite_border</mat-icon>
           </mat-card-actions>
         </mat-card>
