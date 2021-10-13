@@ -1,3 +1,5 @@
+@import "./assets/_mixins.scss";
+
 ::-webkit-scrollbar {
   width: 1px;
   /* Remove scrollbar space */
@@ -78,4 +80,8 @@ body {
 
 .light-theme {
   @include angular-material-theme($cinemApp-Angular-client-theme);
+}
+
+.custom-dialog-container .mat-dialog-container {
+  background-color: #111;
 }

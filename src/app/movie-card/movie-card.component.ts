@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { GenreModalComponent } from '../genre-modal/genre-modal.component';
+import { SynopsisModalComponent } from '../synopsis-modal/synopsis-modal.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -11,6 +11,7 @@ import { GenreModalComponent } from '../genre-modal/genre-modal.component';
 })
 export class MovieCardComponent implements OnInit {
   movies: any[] = [];
+  genres: any[] = [];
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -20,6 +21,7 @@ export class MovieCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies();
+    this.getAGenre();
   }
 
   getMovies(): void {
@@ -30,11 +32,21 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
-  openGenreModal(name: string, description: string): void {
-    this.dialog.open(GenreModalComponent, {
-      width: '50%',
+  getAGenre(): void {
+    this.fetchApiData.getGenres().subscribe((response: any) => {
+      this.genres = response;
+      console.log(this.genres);
+      return this.genres;
+    });
+  }
+
+  openSynopsisModal(title: string, description: string): void {
+    this.dialog.open(SynopsisModalComponent, {
+      panelClass: 'custom-dialog-container',
+      width: '70%',
+      height: '70%',
       data: {
-        Name: name,
+        Name: title,
         Description: description,
       }
     });

@@ -30,6 +30,7 @@ import { DirectorsComponent } from './directors/directors.component';
 import { GenresComponent } from './genres/genres.component';
 import { MatTableModule } from '@angular/material/table';
 import { GenreModalComponent } from './genre-modal/genre-modal.component';
+import { SynopsisModalComponent } from './synopsis-modal/synopsis-modal.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -54,6 +55,7 @@ const appRoutes: Routes = [
     DirectorsComponent,
     GenresComponent,
     GenreModalComponent,
+    SynopsisModalComponent,
   ],
   imports: [
     BrowserModule,
