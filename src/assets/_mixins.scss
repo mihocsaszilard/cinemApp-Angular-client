@@ -1,3 +1,9 @@
+$red: rgba(255, 0, 0, 0.9);
+$halfred: rgba($red, 0.5);
+$darkred: darken($red, 25%);
+$almostblack: rgba(33, 33, 33, 1);
+$white: rgba(240, 240, 240, 0.9);
+
 h1,
 h2,
 h3,
@@ -10,11 +16,24 @@ h6 {
 @mixin contentView {
   h1 {
     font-size: 80px;
-    text-shadow: 1px 2px 0 red;
-    color: #212121;
+    text-shadow: 1px 2px 0 $red;
+    color: $almostblack;
     margin-bottom: 35px;
   }
   width: 80%;
   margin: auto;
   margin-top: 40px;
+}
+
+@mixin title {
+  font-family: "Righteous", cursive;
+  text-shadow: 1px 1px 0 $halfred;
+  color: lighten($almostblack, 5%);
+  margin: 10px;
+}
+
+@mixin textfont {
+  color: $white;
+  font-size: 18px;
+  line-height: 1.6;
 }
