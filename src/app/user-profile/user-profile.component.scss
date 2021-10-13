@@ -3,3 +3,16 @@
 #content {
   @include contentView;
 }
+
+tr {
+  height: 40px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 877px) {
+  #content {
+    h1 {
+      font-size: 60px !important;
+    }
+  }
+}
