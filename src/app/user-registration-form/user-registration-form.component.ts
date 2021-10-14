@@ -2,7 +2,6 @@ import { Component, OnInit, Input, EventEmitter, HostBinding, } from '@angular/c
 import { MatDialogRef } from '@angular/material/dialog';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-user-registration-form',
@@ -27,12 +26,12 @@ export class UserRegistrationFormComponent implements OnInit {
     this.fetchApiData.userRegistration(this.userData).subscribe((result) => {
       // Logic for a successful user registration goes here! (To be implemented)
       this.dialogRef.close(); // This will close the modal on success!
-      console.log(result);
+      // console.log(result);
       this.snackBar.open(result, 'OK', {
         duration: 2000
       });
     }, (result) => {
-      console.log(result);
+      // console.log(result);
       this.snackBar.open(result, 'OK', {
         duration: 2000
       });

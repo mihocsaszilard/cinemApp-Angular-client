@@ -19,7 +19,7 @@ export class ActorsComponent implements OnInit {
   getActors(): void {
     this.fetchApiData.getActors().subscribe((response: any) => {
       this.actors = response;
-      console.log(this.actors);
+      // console.log(this.actors);
       return this.actors;
     });
   }

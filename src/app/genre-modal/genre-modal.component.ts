@@ -26,7 +26,7 @@ export class GenreModalComponent implements OnInit {
   getGenreDescription(): void {
     this.fetchApiData.getGenres().subscribe((response: any) => {
       this.genres = response;
-      console.log(this.genres);
+      // console.log(this.genres);
       return this.genres;
     });
   }

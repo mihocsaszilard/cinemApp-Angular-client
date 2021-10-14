@@ -19,7 +19,7 @@ export class DirectorsComponent implements OnInit {
   getDirectors(): void {
     this.fetchApiData.getDirectors().subscribe((response: any) => {
       this.directors = response;
-      console.log(this.directors);
+      // console.log(this.directors);
       return this.directors;
     });
   }
