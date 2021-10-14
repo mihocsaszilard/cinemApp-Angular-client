@@ -4,9 +4,43 @@
   @include contentView;
 }
 
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h2 {
+    font-size: 26px;
+  }
+  p {
+    border-bottom: 1px solid $halfred;
+  }
+}
+
 tr {
   height: 40px;
   font-size: 18px;
+}
+
+.favoriteMovies {
+  h1 {
+    margin-top: 20px;
+    padding-top: 30px;
+    text-align: left;
+    border-top: 1px solid $halfred;
+    line-height: 1;
+  }
+  h2 {
+    @include title;
+    font-size: 26px;
+    color: $white;
+    text-shadow: none;
+  }
+  text-align: center;
+  img {
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 877px) {

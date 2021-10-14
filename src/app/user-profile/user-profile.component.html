@@ -3,21 +3,29 @@
   <div id="content">
     <h1>Profile</h1>
     <div class="profile">
-      <h2>Hello {{user.Username}}</h2>
-      <p>These are your data's:</p>
-      <td style="width: 150px;">
-        <tr>Firstname</tr>
-        <tr>Lastname</tr>
-        <tr>Birthday</tr>
-        <tr>e-mail</tr>
-      </td>
-      <td>
-        <tr><input value={{user.FirstName}} /></tr>
-        <tr><input value={{user.LastName}} /></tr>
-        <tr><input value={{(user.Birth).slice(0,10)}} /></tr>
-        <tr><input value={{user.Email}} /></tr>
-      </td>
+      <div>
+        <h2>Hello {{user.Username}}</h2>
+        <p>Data about you:</p>
+        <td style="width: 150px;">
+          <tr>Username</tr>
+          <tr>Firstname</tr>
+          <tr>Lastname</tr>
+          <tr>Birthday</tr>
+          <tr>e-mail</tr>
+        </td>
+        <td>
+          <tr><input value={{user.Username}} /></tr>
+          <tr><input value={{user.FirstName}} /></tr>
+          <tr><input value={{user.LastName}} /></tr>
+          <tr><input value={{(user.Birth).slice(0,10)}} /></tr>
+          <tr><input value={{user.Email}} /></tr>
+        </td>
+      </div>
+    </div>
+    <div class="favoriteMovies" *ngFor="let fav of favoriteMovies">
+      <h1>Favorite Movies</h1>
+      <h2>{{fav.Title}}</h2>
+      <img src={{fav.ImgPath}} />
     </div>
   </div>
-
 </div>
