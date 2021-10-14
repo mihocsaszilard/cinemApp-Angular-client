@@ -1,10 +1,17 @@
-<div>
-  <mat-dialog-content>
-    <h3 mat-dialog-title>
-      {{data.Name}}
-    </h3>
-    <p>
-      {{data.Description}}
-    </p>
-  </mat-dialog-content>
+<div id="body">
+  <div id="main-content">
+    <mat-dialog-content>
+      <h1>
+        {{data.Name}}
+      </h1>
+      <div *ngFor=" let genre of genres">
+        <p *ngIf="data.Name == genre.Name">
+          {{genre.Description}}
+        </p>
+      </div>
+      <div class="triangle"></div>
+    </mat-dialog-content>
+  </div>
+
+  <!-- <div class="triangle"></div> -->
 </div>
