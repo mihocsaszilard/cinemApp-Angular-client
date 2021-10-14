@@ -17,6 +17,14 @@
     border-bottom: 1px solid $halfred;
   }
 }
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+mat-form-field {
+  margin: 0 10px;
+}
 
 tr {
   height: 40px;

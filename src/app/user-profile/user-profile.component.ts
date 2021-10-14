@@ -1,14 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, NgModule } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
+import { EditUserComponent } from '../edit-user/edit-user.component';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss']
 })
+
+
 export class UserProfileComponent implements OnInit {
 
-  constructor(public fetchApiData: FetchApiDataService) { }
+  constructor(
+    public fetchApiData: FetchApiDataService,
+    public dialog: MatDialog,
+    public router: Router,
+  ) { }
 
   user: any = {};
   movies: any[] = [];
@@ -25,7 +34,15 @@ export class UserProfileComponent implements OnInit {
     const currentUser = localStorage.getItem('user');
     this.fetchApiData.getUser(currentUser).subscribe((response: any) => {
       this.user = response;
+      this.user.Birth = response.Birth.slice(0, 10);
+      console.log(this.user);
       this.getMovies();
+    });
+  }
+
+  openEditDialog(): void {
+    this.dialog.open(EditUserComponent, {
+      width: '500px'
     });
   }
 
@@ -55,4 +72,3 @@ export class UserProfileComponent implements OnInit {
     return this.favoriteMovies;
   }
 }
-

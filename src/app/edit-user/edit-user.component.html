@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Update Account Details</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+
+      <mat-form-field appearance="legacy">
+        <input matInput [(ngModel)]="user.FirstName" type="text" placeholder="Firstname" name="FirstName">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <input matInput [(ngModel)]="user.LastName" type="text" placeholder="Lastname" name="LastName">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <input matInput [(ngModel)]="user.Password" type="password" placeholder="Password" name="Password">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <input matInput [(ngModel)]="user.Email" type="email" placeholder="e-mail" name="Email">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <input matInput [(ngModel)]="user.Birth" type="date" placeholder="Birthday" name="Birthday">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="editUser()">
+      Submit
+    </button>
+  </mat-card-actions>
+</mat-card>

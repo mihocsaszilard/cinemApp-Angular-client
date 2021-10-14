@@ -32,6 +32,7 @@ import { MatTableModule } from '@angular/material/table';
 import { GenreModalComponent } from './genre-modal/genre-modal.component';
 import { SynopsisModalComponent } from './synopsis-modal/synopsis-modal.component';
 import { DirectorModalComponent } from './director-modal/director-modal.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     GenreModalComponent,
     SynopsisModalComponent,
     DirectorModalComponent,
+    EditUserComponent,
   ],
   imports: [
     BrowserModule,
