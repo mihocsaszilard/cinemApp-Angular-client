@@ -1,0 +1,22 @@
+<div id="body">
+  <div id="main-content">
+    <mat-dialog-content>
+      <h1>
+        {{data.Name}}
+      </h1>
+      <div *ngFor=" let director of directors">
+        <div *ngIf="data.Name == director.Name">
+          <p>
+            {{director.Bio}} <img src={{director.DirectorImg}} alt={{director.Name}}>
+          </p>
+          <p class="p2">
+            Born: {{(director.Birthyear).slice(4, 15)}}
+          </p>
+        </div>
+      </div>
+      <div class="triangle"></div>
+    </mat-dialog-content>
+  </div>
+
+  <!-- <div class="triangle"></div> -->
+</div>
