@@ -220,8 +220,9 @@ export class FetchApiDataService {
   * @param userData
   * @returns success/error message
   */
-  deleteUser(user: any): Observable<any> {
+  deleteUser(): Observable<any> {
     const token = localStorage.getItem('token');
+    const user = localStorage.getItem('user');
     return this.http.delete(apiUrl + `users/${user}`, {
       headers: new HttpHeaders(
         {

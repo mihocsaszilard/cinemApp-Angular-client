@@ -3,6 +3,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { EditUserComponent } from '../edit-user/edit-user.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user-profile',
@@ -17,6 +18,7 @@ export class UserProfileComponent implements OnInit {
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
     public router: Router,
+    public snackbar: MatSnackBar,
   ) { }
 
   user: any = {};
@@ -38,6 +40,18 @@ export class UserProfileComponent implements OnInit {
       console.log(this.user);
       this.getMovies();
     });
+  }
+
+  deleteProfile(): void {
+    if (confirm('Are you sure you want to delete your profile?')) {
+      this.fetchApiData.deleteUser().subscribe(() => {
+        localStorage.clear();
+        this.router.navigate(['welcome']);
+        this.snackbar.open('Account deleted!', 'OK', {
+          duration: 3000
+        });
+      });
+    }
   }
 
   openEditDialog(): void {
