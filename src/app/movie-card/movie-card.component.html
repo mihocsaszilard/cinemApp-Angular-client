@@ -5,7 +5,7 @@
   </div>
   <div class="content">
     <div class="align-help" fxLayout="row wrap">
-      <div class="movies-container" *ngFor="let movie of movies; let genre of genres">
+      <div class="movies-container" *ngFor=" let movie of movies;">
         <mat-card class="card" fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="50%" fxFlex.lg="25%">
           <mat-card-header>
             <mat-card-title class="movie-title">{{movie.Title}}</mat-card-title>
@@ -14,18 +14,21 @@
           <div class="img-shadow"></div>
           <img class="movie-img" src={{movie.ImgPath}} alt={{movie.Title}} />
 
+
           <mat-card-actions class="mat-card-actions">
-            <a color="basic">
+            <a color="basic" (click)="openGenreModal(movie.Genre[0].Name)">
               Genre
             </a>
-            <a color="basic">
+            <a color="basic" (click)="openDirectorModal(movie.Director[0].Name)">
               Director
             </a>
-            <a color="basic" (click)="openSynopsisModal(movie.Title, genre.Description)">
+            <a color="basic" (click)="openSynopsisModal(movie.Title, movie.Description)">
               Synopsis
             </a>
             <mat-icon class="favorites-icon">favorite_border</mat-icon>
           </mat-card-actions>
+
+
         </mat-card>
       </div>
     </div>

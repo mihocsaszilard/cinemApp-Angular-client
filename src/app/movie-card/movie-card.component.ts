@@ -3,6 +3,8 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { SynopsisModalComponent } from '../synopsis-modal/synopsis-modal.component';
+import { GenreModalComponent } from '../genre-modal/genre-modal.component';
+import { DirectorModalComponent } from '../director-modal/director-modal.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -21,7 +23,6 @@ export class MovieCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies();
-    this.getAGenre();
   }
 
   getMovies(): void {
@@ -29,14 +30,6 @@ export class MovieCardComponent implements OnInit {
       this.movies = response;
       console.log(this.movies);
       return this.movies;
-    });
-  }
-
-  getAGenre(): void {
-    this.fetchApiData.getGenres().subscribe((response: any) => {
-      this.genres = response;
-      console.log(this.genres);
-      return this.genres;
     });
   }
 
@@ -48,6 +41,28 @@ export class MovieCardComponent implements OnInit {
       data: {
         Name: title,
         Description: description,
+      }
+    });
+  }
+
+  openGenreModal(name: string): void {
+    this.dialog.open(GenreModalComponent, {
+      panelClass: 'custom-dialog-container',
+      width: '70%',
+      height: '70%',
+      data: {
+        Name: name,
+      }
+    });
+  }
+
+  openDirectorModal(name: string): void {
+    this.dialog.open(DirectorModalComponent, {
+      panelClass: 'custom-dialog-container',
+      width: '70%',
+      height: '70%',
+      data: {
+        Name: name,
       }
     });
   }
