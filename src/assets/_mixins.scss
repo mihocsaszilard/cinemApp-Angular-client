@@ -37,3 +37,76 @@ h6 {
   font-size: 18px;
   line-height: 1.6;
 }
+
+@mixin modal {
+  #body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .triangle {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: $almostblack;
+    height: 600px;
+    width: 600px;
+    clip-path: polygon(0 23%, 0 0, 100% 100%, 43% 100%);
+    z-index: -1;
+  }
+
+  #main-content {
+    padding: 25px;
+    width: 75%;
+    color: $white;
+    z-index: 2;
+    button {
+      position: fixed;
+      top: 10%;
+      right: 15%;
+    }
+    h1 {
+      @include title;
+      font-size: 50px;
+    }
+    p {
+      padding-top: 25px;
+      font-size: 20px;
+      line-height: 1.6;
+      border-top: 1px solid $halfred;
+      z-index: 2;
+    }
+
+    img {
+      height: 200px;
+      float: right;
+      margin-top: 20px;
+      border-bottom: 1px solid $halfred;
+    }
+
+    .p2 {
+      border: 0;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #main-content {
+      text-align: center;
+      p {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      img {
+        float: none;
+      }
+    }
+
+    .triangle {
+      display: none;
+    }
+  }
+}
