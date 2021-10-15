@@ -80,7 +80,7 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     MatTableModule,
   ],
-  providers: [],
+  providers: [MovieCardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
