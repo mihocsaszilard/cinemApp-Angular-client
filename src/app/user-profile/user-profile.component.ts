@@ -4,6 +4,7 @@ import { EditUserComponent } from '../edit-user/edit-user.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MovieCardComponent } from '../movie-card/movie-card.component';
 
 @Component({
   selector: 'app-user-profile',
@@ -19,6 +20,7 @@ export class UserProfileComponent implements OnInit {
     public dialog: MatDialog,
     public router: Router,
     public snackbar: MatSnackBar,
+    public movieCard: MovieCardComponent,
   ) { }
 
   user: any = {};
@@ -46,7 +48,6 @@ export class UserProfileComponent implements OnInit {
     if (confirm('Are you sure you want to delete your profile?')) {
       this.fetchApiData.deleteUser().subscribe(() => {
         localStorage.clear();
-        window.location.reload();
         this.router.navigate(['welcome']);
         this.snackbar.open('Account deleted!', 'OK', {
           duration: 3000
@@ -85,5 +86,9 @@ export class UserProfileComponent implements OnInit {
       // console.log(this.favoriteMovies);
     });
     return this.favoriteMovies;
+  }
+
+  removeFromFavs(id: string, Title: string): void {
+    this.movieCard.removeFromFavorites(id, Title);
   }
 }

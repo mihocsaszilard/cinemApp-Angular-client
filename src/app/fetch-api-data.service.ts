@@ -262,7 +262,7 @@ export class FetchApiDataService {
    * @returns success/error message
    */
   removeFromFavorites(id: string): Observable<any> {
-    return this.http.delete(apiUrl + `users/${user}/movies/${id}`, {
+    return this.http.delete(apiUrl + `users/${user}/removeFromFav/${id}`, {
       headers: new HttpHeaders(
         {
           Authorization: 'Bearer' + token,

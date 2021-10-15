@@ -25,9 +25,11 @@
             <a color="basic" (click)="openSynopsisModal(movie.Title, movie.Description)">
               Synopsis
             </a>
-            <mat-icon class="favorites-icon">favorite_border</mat-icon>
+            <mat-icon *ngIf="!setFavoriteStatus(movie._id)" (click)="addToFavorites(movie._id, movie.Title)"
+              class="favorite-button">favorite_border</mat-icon>
+            <mat-icon *ngIf="setFavoriteStatus(movie._id)" (click)="removeFromFavorites(movie._id, movie.Title)"
+              class="favorite-button-active">favorite</mat-icon>
           </mat-card-actions>
-
 
         </mat-card>
       </div>

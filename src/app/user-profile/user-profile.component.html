@@ -3,7 +3,7 @@
   <div id="content">
     <h1>Profile</h1>
     <div class="profile">
-      <div>
+      <div class="card">
         <h2>Hello {{user.Username}}</h2>
         <p></p>
         <!-- <td style="width: 150px;">
@@ -49,10 +49,14 @@
         </td>
       </div>
     </div>
-    <div class="favoriteMovies" *ngFor="let fav of favoriteMovies">
-      <h1>Favorite Movies</h1>
-      <h2>{{fav.Title}}</h2>
-      <img src={{fav.ImgPath}} />
+
+    <h1 class="favoriteTitle">Favorite Movies</h1>
+    <div class="favoriteMovies">
+      <div class="movie-container" *ngFor="let fav of favoriteMovies">
+        <h2>{{fav.Title}}</h2>
+        <img src={{fav.ImgPath}} />
+        <button mat-raised-button color="warn" (click)="removeFromFavs(fav._id, fav.Title)">Remove</button>
+      </div>
     </div>
   </div>
 </div>
