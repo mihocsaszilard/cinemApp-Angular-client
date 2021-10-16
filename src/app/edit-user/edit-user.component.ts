@@ -33,7 +33,7 @@ export class EditUserComponent implements OnInit {
     this.fetchApiData.editUser(this.userDetails).subscribe((res) => {
       this.dialogRef.close();
       localStorage.setItem('user', res.Username);
-      console.log(res);
+      // console.log(res);
       this.snackBar.open(this.userDetails.Username, 'Successfully updated user details!', {
         duration: 3000
       });

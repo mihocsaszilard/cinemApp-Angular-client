@@ -39,7 +39,7 @@ export class UserProfileComponent implements OnInit {
     this.fetchApiData.getUser(currentUser).subscribe((response: any) => {
       this.user = response;
       this.user.Birth = response.Birth.slice(0, 10);
-      console.log(this.user);
+      // console.log(this.user);
       this.getMovies();
     });
   }
