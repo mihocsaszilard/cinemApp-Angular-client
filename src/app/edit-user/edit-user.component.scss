@@ -1,3 +1,7 @@
 mat-form-field {
   margin: 0 10px;
 }
+
+::ng-deep .mat-form-field-label {
+  color: rgb(255, 255, 255) !important;
+}

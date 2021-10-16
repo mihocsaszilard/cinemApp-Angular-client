@@ -4,15 +4,17 @@
   </mat-card-header>
   <mat-card-content>
     <form>
-
+      <mat-form-field appearance="legacy">
+        <input matInput [(ngModel)]="user.Userame" type="text" placeholder="Username - do not change" name="Userame">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <input matInput [(ngModel)]="user.Password" type="password" placeholder="Password" name="Password">
+      </mat-form-field>
       <mat-form-field appearance="legacy">
         <input matInput [(ngModel)]="user.FirstName" type="text" placeholder="Firstname" name="FirstName">
       </mat-form-field>
       <mat-form-field appearance="legacy">
         <input matInput [(ngModel)]="user.LastName" type="text" placeholder="Lastname" name="LastName">
-      </mat-form-field>
-      <mat-form-field appearance="legacy">
-        <input matInput [(ngModel)]="user.Password" type="password" placeholder="Password" name="Password">
       </mat-form-field>
       <mat-form-field appearance="legacy">
         <input matInput [(ngModel)]="user.Email" type="email" placeholder="e-mail" name="Email">
