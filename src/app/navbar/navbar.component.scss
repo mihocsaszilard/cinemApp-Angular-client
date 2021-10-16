@@ -57,6 +57,9 @@ mat-toolbar {
     margin: 5px;
     border-bottom: 1px solid $red;
     transition: all 0.3s;
+    img {
+      border-radius: 3px;
+    }
     &:hover {
       transform: scale(1.1);
     }
