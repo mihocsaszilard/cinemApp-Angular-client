@@ -19,6 +19,12 @@ export class NavbarComponent implements OnInit {
       .catch(console.error);
   }
 
+  toMovies(): void {
+    this.router.navigate(['/movies'])
+      .then(success => console.log('navigation success?', success))
+      .catch(console.error);
+  }
+
   toActors(): void {
     this.router.navigate(['/actors'])
       .then(success => console.log('navigation success?', success))
