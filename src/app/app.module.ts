@@ -34,6 +34,7 @@ import { SynopsisModalComponent } from './synopsis-modal/synopsis-modal.componen
 import { DirectorModalComponent } from './director-modal/director-modal.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDividerModule } from '@angular/material/divider';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -81,6 +82,7 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     MatTableModule,
     MatProgressSpinnerModule,
+    MatDividerModule,
   ],
   providers: [MovieCardComponent],
   bootstrap: [AppComponent]
