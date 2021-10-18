@@ -4,6 +4,7 @@
       Sign up!
     </mat-card-title>
   </mat-card-header>
+  <mat-spinner *ngIf="isLoading" class="spinner" color="warn" diameter="30"></mat-spinner>
   <mat-card-content>
     <form>
       <mat-form-field>

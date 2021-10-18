@@ -15,7 +15,7 @@ export class WelcomePageComponent implements OnInit {
   }
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
-      width: '280px'
+      width: '480px'
     });
   }
 

@@ -4,6 +4,10 @@
   @include contentView;
 }
 
+.spinner {
+  @include spinner;
+}
+
 .ng-star-inserted {
   display: flex;
   align-items: center;

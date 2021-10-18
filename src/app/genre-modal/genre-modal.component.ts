@@ -9,6 +9,8 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 })
 export class GenreModalComponent implements OnInit {
 
+  isLoading = false;
+
   genres: any[] = [];
 
   constructor(
@@ -24,7 +26,9 @@ export class GenreModalComponent implements OnInit {
   }
 
   getGenreDescription(): void {
+    this.isLoading = true;
     this.fetchApiData.getGenres().subscribe((response: any) => {
+      this.isLoading = false;
       this.genres = response;
       // console.log(this.genres);
       return this.genres;

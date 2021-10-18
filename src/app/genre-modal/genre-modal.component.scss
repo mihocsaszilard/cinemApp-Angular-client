@@ -1,3 +1,9 @@
 @import "../../assets/mixins";
 
 @include modal;
+
+.spinner {
+  @include modal-spinner;
+  top: 50%;
+  left: 50%;
+}

@@ -33,6 +33,7 @@ import { GenreModalComponent } from './genre-modal/genre-modal.component';
 import { SynopsisModalComponent } from './synopsis-modal/synopsis-modal.component';
 import { DirectorModalComponent } from './director-modal/director-modal.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -79,6 +80,7 @@ const appRoutes: Routes = [
     MatSidenavModule,
     FlexLayoutModule,
     MatTableModule,
+    MatProgressSpinnerModule,
   ],
   providers: [MovieCardComponent],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 })
 export class ActorsComponent implements OnInit {
 
+  isLoading = false;
   actors: any[] = [];
 
   constructor(public fetchApiData: FetchApiDataService) { }
@@ -17,7 +18,9 @@ export class ActorsComponent implements OnInit {
   }
 
   getActors(): void {
+    this.isLoading = true;
     this.fetchApiData.getActors().subscribe((response: any) => {
+      this.isLoading = false;
       this.actors = response;
       // console.log(this.actors);
       return this.actors;

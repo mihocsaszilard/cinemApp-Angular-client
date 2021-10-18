@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class UserLoginFormComponent implements OnInit {
 
+  isLoading = false;
+
   // defines the component’s input
   @Input() userData = { Username: '', Password: '' };
 
@@ -25,15 +27,18 @@ export class UserLoginFormComponent implements OnInit {
   }
 
   loginUser(): void {
+    this.isLoading = true;
     this.fetchApiData.userLogin(this.userData).subscribe((result) => {
       localStorage.setItem('user', result.user.Username);
       localStorage.setItem('token', result.token);
+      this.isLoading = false;
       this.dialogRef.close();
       // console.log(result, 'OK', {
       //   duration: 2000
       // });
       this.router.navigate(['movies']);
     }, (result) => {
+      this.isLoading = false;
       // console.log(result);
       this.snackBar.open(result, 'OK', {
         duration: 2000

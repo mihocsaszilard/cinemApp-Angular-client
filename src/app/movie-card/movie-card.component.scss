@@ -4,6 +4,10 @@
   @include contentView;
 }
 
+.spinner {
+  @include spinner;
+}
+
 .movies-container {
   display: flex;
   justify-content: center;

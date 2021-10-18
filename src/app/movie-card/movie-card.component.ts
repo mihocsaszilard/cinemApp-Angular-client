@@ -13,6 +13,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent implements OnInit {
+
+  isLoading = false;
   movies: any[] = [];
   genres: any[] = [];
   favorites: any[] = [];
@@ -29,7 +31,9 @@ export class MovieCardComponent implements OnInit {
   }
 
   getMovies(): void {
+    this.isLoading = true;
     this.fetchApiData.getAllMovies().subscribe((response: any) => {
+      this.isLoading = false;
       this.movies = response;
       // console.log(this.movies);
       return this.movies;
@@ -38,6 +42,7 @@ export class MovieCardComponent implements OnInit {
 
   openSynopsisModal(title: string, description: string): void {
     this.dialog.open(SynopsisModalComponent, {
+
       panelClass: 'custom-dialog-container',
       width: '70%',
       height: '70%',

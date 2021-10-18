@@ -15,6 +15,8 @@ import { MovieCardComponent } from '../movie-card/movie-card.component';
 
 export class UserProfileComponent implements OnInit {
 
+  isLoading = false;
+
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
@@ -35,8 +37,10 @@ export class UserProfileComponent implements OnInit {
   }
 
   getUserData(): void {
+    this.isLoading = true;
     const currentUser = localStorage.getItem('user');
     this.fetchApiData.getUser(currentUser).subscribe((response: any) => {
+      this.isLoading = false;
       this.user = response;
       this.user.Birth = response.Birth.slice(0, 10);
       // console.log(this.user);
@@ -71,7 +75,9 @@ export class UserProfileComponent implements OnInit {
   }
 
   getMovies(): void {
+    this.isLoading = true;
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
+      this.isLoading = false;
       this.showFavs = resp;
       // console.log(this.showFavs);
       return this.filterMovies();

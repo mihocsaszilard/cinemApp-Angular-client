@@ -8,6 +8,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 })
 export class DirectorsComponent implements OnInit {
 
+  isLoading = false;
   directors: any[] = [];
 
   constructor(public fetchApiData: FetchApiDataService) { }
@@ -17,7 +18,9 @@ export class DirectorsComponent implements OnInit {
   }
 
   getDirectors(): void {
+    this.isLoading = true;
     this.fetchApiData.getDirectors().subscribe((response: any) => {
+      this.isLoading = false;
       this.directors = response;
       // console.log(this.directors);
       return this.directors;

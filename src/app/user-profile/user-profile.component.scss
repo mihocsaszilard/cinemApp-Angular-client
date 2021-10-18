@@ -4,6 +4,10 @@
   @include contentView;
 }
 
+.spinner {
+  @include spinner;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -47,7 +51,6 @@ tr {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   .movie-container {
     width: 300px;
     display: flex;

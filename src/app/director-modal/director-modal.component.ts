@@ -9,6 +9,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 })
 export class DirectorModalComponent implements OnInit {
 
+  isLoading = false;
   directors: any[] = [];
 
   constructor(
@@ -24,7 +25,9 @@ export class DirectorModalComponent implements OnInit {
   }
 
   getDirectorBio(): void {
+    this.isLoading = true;
     this.fetchApiData.getDirectors().subscribe((response: any) => {
+      this.isLoading = false;
       this.directors = response;
       // console.log(this.directors);
       return this.directors;

@@ -1,1 +1,35 @@
+@import "../../assets/_mixins.scss";
 
+.spinner {
+  @include modal-spinner;
+}
+
+mat-card-header {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $halfred;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+mat-card-content,
+mat-card-actions {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-form-field {
+  width: 50%;
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
+}
+
+::ng-deep .mat-form-field-label {
+  color: rgb(255, 255, 255) !important;
+}

@@ -4,6 +4,10 @@
   @include contentView;
 }
 
+.spinner {
+  @include spinner;
+}
+
 .actor-img {
   height: 275px;
   float: left;

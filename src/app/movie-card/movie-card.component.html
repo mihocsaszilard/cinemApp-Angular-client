@@ -1,5 +1,6 @@
 <div id="#main-body">
   <app-navbar></app-navbar>
+  <mat-spinner *ngIf="isLoading" class="spinner" color="warn" diameter="40"></mat-spinner>
   <div id="content">
     <h1>Movies</h1>
   </div>
@@ -13,7 +14,6 @@
           </mat-card-header>
           <div class="img-shadow"></div>
           <img class="movie-img" src={{movie.ImgPath}} alt={{movie.Title}} />
-
 
           <mat-card-actions class="mat-card-actions">
             <a color="basic" (click)="openGenreModal(movie.Genre[0].Name)">

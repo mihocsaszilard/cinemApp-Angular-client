@@ -8,6 +8,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 })
 export class GenresComponent implements OnInit {
 
+  isLoading = false;
   genres: any[] = [];
 
   constructor(public fetchApiData: FetchApiDataService) { }
@@ -17,7 +18,9 @@ export class GenresComponent implements OnInit {
   }
 
   getGenres(): void {
+    this.isLoading = true;
     this.fetchApiData.getGenres().subscribe((response: any) => {
+      this.isLoading = false;
       this.genres = response;
       // console.log(this.genres);
       return this.genres;
