@@ -46,7 +46,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * Get all movies method
    * @returns an array of movies
    */
@@ -62,10 +62,10 @@ export class FetchApiDataService {
     );
   }
 
-  /*
-  * Get a movie
-  * @returns a movie
-  */
+  /**
+   * Get a movie
+   * @returns a movie
+   */
   getAMovie(): Observable<any> {
     return this.http.get(apiUrl + 'movies/:movieId', {
       headers: new HttpHeaders(
@@ -78,7 +78,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * Get all directors method
    * @returns array of directors
    */
@@ -94,7 +94,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * Get one director
    * @returns a director
    */
@@ -110,7 +110,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * Get all genres
    * @returns an array of genres
    */
@@ -126,7 +126,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * Get one genre
    * @returns a genre
    */
@@ -142,7 +142,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * Get all actors
    * @returns array of actors
    */
@@ -158,7 +158,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * Get one actor
    * @returns an actor
    */
@@ -174,11 +174,11 @@ export class FetchApiDataService {
     );
   }
 
-  /*
-  * Get user by username
-  * @param username
-  * @returns Object - user data
-  */
+  /**
+   * Get user by username
+   * @param username - username
+   * @returns Object - user data
+   */
   getUser(username: any): Observable<any> {
     return this.http.get(apiUrl + `users/${username}`, {
       headers: new HttpHeaders(
@@ -191,9 +191,9 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * Edit userData user by username
-   * @param userData
+   * @param userData - username and password
    * @returns success/error message
    */
   editUser(userDetails: any): Observable<any> {
@@ -208,11 +208,11 @@ export class FetchApiDataService {
     );
   }
 
-  /*
-  * Delete user
-  * @param userData
-  * @returns success/error message
-  */
+  /**
+   * Delete user
+   * @param userData - username and password
+   * @returns success/error message
+   */
   deleteUser(): Observable<any> {
     return this.http.delete(apiUrl + `users/${user}`, {
       headers: new HttpHeaders(
@@ -225,10 +225,10 @@ export class FetchApiDataService {
     );
   }
 
-  /*
-  * @param username (Injected automatically, username extracted from login params)
-  * @returns Array - favorite movies
-  */
+  /**
+   * @param username (Injected automatically, username extracted from login params)
+   * @returns Array - favorite movies
+   */
   getFavorites(): Observable<any> {
     return this.http.get(apiUrl + `users/${user}/movies`, {
       headers: new HttpHeaders(
@@ -241,7 +241,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * @param id, username (Injected automatically, username extracted from login params)
    * @returns success/error message
    */
@@ -257,7 +257,7 @@ export class FetchApiDataService {
     );
   }
 
-  /*
+  /**
    * @param id, username (Injected automatically, username extracted from login params)
    * @returns success/error message
    */
