@@ -1,5 +1,7 @@
 # CinemAppAngularClient
 
+[page preview video](https://user-images.githubusercontent.com/62619507/137753123-dd545bd6-83ad-4c2c-8cf8-38bd6f61ecbf.mp4)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
 ## Development server
