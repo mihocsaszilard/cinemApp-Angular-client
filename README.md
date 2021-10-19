@@ -20,6 +20,7 @@
   + [Key Features](#features)
   + [The 5 W's](#fiveW)
   + [Technical Requirements](#technical)
+  + [API Info](#api)
   + [Contact](#contact)
 
 <div id="angular">
@@ -144,9 +145,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   <li>The application's codebase must contain comments using Typedoc</li>
   <li>The project must contain technical documentation using JSDoc</li>
   <li>The project must be hosted on GitHub Pages</li>
-  
 </ul>
 
+<h2 id="api">API Info</h2>
+
+<p>[cinemApp - API](https://github.com/mihocsaszilard/cinemApp)</p>
+<p>[API Documantation](https://cinemapp-backend.herokuapp.com/documentation)</p>
 
 <h2 id="contact">Contact</h2>
 
