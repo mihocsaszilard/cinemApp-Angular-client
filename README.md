@@ -149,8 +149,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <h2 id="api">API Info</h2>
 
-<p>[cinemApp - API](https://github.com/mihocsaszilard/cinemApp)</p>
-<p>[API Documantation](https://cinemapp-backend.herokuapp.com/documentation)</p>
+[cinemApp - API](https://github.com/mihocsaszilard/cinemApp)
+[API Documantation](https://cinemapp-backend.herokuapp.com/documentation)
 
 <h2 id="contact">Contact</h2>
 
