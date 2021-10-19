@@ -67,6 +67,15 @@ mat-toolbar {
   }
 }
 
+#credits {
+  transform: rotate(90deg);
+  position: fixed;
+  color: $red;
+  bottom: 61px;
+  right: -60px;
+  font-size: 12.5px;
+}
+
 @media screen and (max-width: 962px) {
   mat-sidenav-container {
     background-color: transparent !important;
@@ -105,6 +114,7 @@ mat-toolbar {
       }
     }
   }
+
   #logo {
     position: absolute;
     left: 50%;
@@ -141,17 +151,15 @@ mat-toolbar {
       border-bottom: 1px solid $red;
     }
   }
-}
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 30px;
-  background-color: #111;
-  margin: auto;
-  text-align: center;
-  z-index: 999;
+  #credits {
+    position: absolute;
+    bottom: 55px;
+    left: 21%;
+    transform: rotate(0deg);
+    font-size: 12px;
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 400px) {

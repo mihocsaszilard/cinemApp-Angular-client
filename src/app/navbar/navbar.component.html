@@ -29,6 +29,7 @@
         <img src="assets/img/twitter.svg" alt="twitter logo">
       </a>
     </div>
+    <p id="credits" fxShow="true" fxHide.lt-md="true">mihocsaszilard © 2021</p>
   </mat-toolbar-row>
 </mat-toolbar>
 <!--mobile navigation-->
@@ -42,6 +43,8 @@
       <a (click)="toProfile()" color="basic">Profile</a>
       <a (click)="logOut()" color="basic">Logout</a>
       <a (click)="sidenav.toggle()">Close</a>
+
+      <p id="credits" fxShow="true" fxHide.gt-sm="true">mihocsaszilard © 2021</p>
       <div id="social">
         <a href="https://www.linkedin.com/in/mihocsaszilard/" target="_blank" color="basic">
           <img src="assets/img/linkedin.svg" alt="linkedin logo">
