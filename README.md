@@ -27,3 +27,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+<h2>Contact</h2>
+
+[<img align="left" alt="linkedin profile" width="25px" src="./src/assets/img/linkedin-md.svg" />][linkedin]
+[<img align="left" alt="twitter profile" width="25px" src="./src/assets/img/twitter-md.svg" />][twitter]
+[<img align="left" alt="portfolio website" width="25px" src="./src/assets/img/website-md.svg" />][website]
+[<img align="left" alt="send me an email" width="25px" src="./src/assets/img/mail-md.svg" />](mailto:mihocsa48@gmail.com)-> <mihocsa48@gmail.com>
+
+
+[linkedin]: https://www.linkedin.com/in/mihocsaszilard/
+[twitter]: https://twitter.com/MihocsaS
+[website]: https://mihocsaszilard.github.io/Portfolio-Website-CF/
