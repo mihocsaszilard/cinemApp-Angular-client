@@ -3,7 +3,7 @@
 <h2>Objective</h2>
 
 <p align="center">
-  <em>Using Angular, build the client-side for an application called myFlix based on
+  <em>Using Angular, build the client-side for an application called cinemApp based on
       its existing server-side code (REST API and database), with supporting
       documentation.
   </em>
