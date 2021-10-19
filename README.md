@@ -1,6 +1,6 @@
 <h1 align="center">cinemApp-Angular Client</h1>
 
-<h2>Objective</h2>
+<h2 id="objective">Objective</h2>
 
 <p align="center">
   <em>Using Angular, build the client-side for an application called cinemApp based on
@@ -10,6 +10,19 @@
 </p>
 
 [page preview video](https://user-images.githubusercontent.com/62619507/137753123-dd545bd6-83ad-4c2c-8cf8-38bd6f61ecbf.mp4)
+
+ <h2>Table of content</h2>
+
+  + [Objective](#objective)
+  + [Get Started](#angular)
+  + [Context](#context)
+  + [User Stories](#stories)
+  + [Key Features](#features)
+  + [The 5 W's](#fiveW)
+  + [Technical Requirements](#technical)
+  + [Contact](#contact)
+
+<div id="angular">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
@@ -37,8 +50,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+</div>
 
-<h2>Context</h2>
+<h2 id="context">Context</h2>
 
 <p>
   As the modern workplace continues to transform, remote work has become more important than
@@ -75,7 +89,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   portfolio.
 </p>
 
-<h2>User Stories</h2>
+<h2 id="stories">User Stories</h2>
 
 <ul>
   <li>As a user, I want to be able to receive information on movies, directors, and genres so that I
@@ -83,7 +97,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   <li>As a user, I want to be able to create a profile so I can save data about my favorite movies</li>
 </ul>
 
-<h2>Key Features</h2>
+<h2 id="features">Key Features</h2>
 
 <ul>
   <li>The app should display a welcome view where users will be able to either log in or register an account</li>
@@ -101,7 +115,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 </ul>
 
 
-<h2>The 5 W's</h2>
+<h2 id="fiveW">The 5 W's</h2>
 
 <ol type="1">
   <li><em>Who </em>—The users of the myFlix movie app and codebase, including other developers and designers</li>
@@ -120,7 +134,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
                     your ability to create straightforward documentation for other developers and employers</li>
 </ol>
 
-<h2>Technical Requirements</h2>
+<h2 id="technical">Technical Requirements</h2>
 
 <ul>
   <li>The application must be written in Angular (version 9 or later)</li>
@@ -134,7 +148,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 </ul>
 
 
-<h2>Contact</h2>
+<h2 id="contact">Contact</h2>
 
 [<img align="left" alt="linkedin profile" width="25px" src="./src/assets/img/linkedin-md.svg" />][linkedin]
 [<img align="left" alt="twitter profile" width="25px" src="./src/assets/img/twitter-md.svg" />][twitter]
