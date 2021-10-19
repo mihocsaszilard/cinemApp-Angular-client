@@ -97,6 +97,7 @@ tr {
   .favoriteMovies {
     flex-direction: column;
     .movie-container {
+      margin: auto;
       border-right: none;
       border-bottom: 1px solid $halfred;
     }

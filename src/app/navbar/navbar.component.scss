@@ -96,8 +96,12 @@ mat-toolbar {
         margin-top: 60px;
       }
       &:nth-child(6) {
+        color: $red;
+      }
+      &:nth-child(7) {
         font-size: 18px;
         color: $red;
+        text-decoration: underline;
       }
     }
   }
